@@ -9,12 +9,12 @@
 #
 # Nom du programme
 #
-PROG = myprog
+PROG = prog
 
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = Multim.cpp main.cpp 
+SOURCES = Multim.cpp image.cpp main.cpp 
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
@@ -24,7 +24,7 @@ OBJETS = ${SOURCES:%.cpp=%.o}
 #
 # Compilateur C++
 #
-CXX = c++
+CXX = g++
 
 #
 # Options du compilateur C++

@@ -3,8 +3,12 @@
 #include <sstream>
 
 
-Multim::Multim()
-{
+Multim::Multim(){
+    this->name = "Test";
+    this->pathname = "test.png";
+}
+
+Multim::~Multim(){
 
 }
 
@@ -29,6 +33,8 @@ std::string Multim::getPath() const{
 void Multim::setName(std::string name){
     this->name = name;
 }
+
+void Multim::play() const{ }
 
 void Multim::setString(std::string path){
     this->pathname = path;

@@ -9,13 +9,11 @@ private:
   float y;
 
 public:
-  image();
   image(std::string name, std::string pathname, float x, float y);
-  ~image();
   float getLat() const;
   float getLong() const;
   void exibiteTxt(std::ostream & s) const;
-  void play() override;
+  void play() const override;
 };
 
 #endif // IMAGE_H

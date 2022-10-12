@@ -17,7 +17,7 @@ public:
     void exibiteTxt(std::ostream & s) const;
     void setName(std::string name);
     void setString(std::string path);
-    virtual void play();
+    virtual void play() const;
 };
 
 #endif // MULTIM_H
