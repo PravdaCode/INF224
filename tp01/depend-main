@@ -1,0 +1,4 @@
+-Wall 
+-g 
+-MM 
+main.cpp 
