@@ -9,7 +9,7 @@ Multim::Multim(){
 }
 
 Multim::~Multim(){
-
+    std::cout << "Destroy Multimedia" << std::endl;
 }
 
 Multim::Multim(std::string name, std::string pathname)
@@ -23,6 +23,10 @@ void Multim::exibiteTxt(std::ostream & s) const{
 
 }
 
+void Multim::play() const{
+    std::cout << this->getName() << " " << this->getPath() << std::endl;
+}
+
 std::string Multim::getName() const{
     return this->name;
 }
@@ -34,7 +38,6 @@ void Multim::setName(std::string name){
     this->name = name;
 }
 
-void Multim::play() const{ }
 
 void Multim::setString(std::string path){
     this->pathname = path;

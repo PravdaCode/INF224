@@ -11,10 +11,10 @@ private:
 public:
     Multim();
     Multim(std::string name, std::string pathname);
-    ~Multim();
+    virtual ~Multim();
     std::string getName() const;
     std::string getPath() const;
-    void exibiteTxt(std::ostream & s) const;
+    virtual void exibiteTxt(std::ostream & s) const;
     void setName(std::string name);
     void setString(std::string path);
     virtual void play() const;

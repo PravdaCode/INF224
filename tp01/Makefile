@@ -14,7 +14,7 @@ PROG = prog
 #
 # Fichiers sources (NE PAS METTRE les .h ni les .o seulement les .cpp)
 #
-SOURCES = Multim.cpp image.cpp main.cpp 
+SOURCES = Multim.cpp Group.cpp MultiTable.cpp image.cpp video.cpp Film.cpp main.cpp 
 
 #
 # Fichiers objets (ne pas modifier sauf si l'extension n'est pas .cpp)
@@ -97,4 +97,4 @@ depend-${PROG}:
 #
 # Inclusion du fichier des dependances
 #
--include depend-${PROG}
+-include depend- ${PROG}

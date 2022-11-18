@@ -1,0 +1,10 @@
+-Wall 
+-g 
+-MM 
+Multim.cpp 
+Group.cpp 
+MultiTable.cpp 
+image.cpp 
+video.cpp 
+Film.cpp 
+main.cpp 

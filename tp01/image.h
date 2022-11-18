@@ -12,7 +12,7 @@ public:
   image(std::string name, std::string pathname, float x, float y);
   float getLat() const;
   float getLong() const;
-  void exibiteTxt(std::ostream & s) const;
+  void exibiteTxt(std::ostream & s) const override;
   void play() const override;
 };
 

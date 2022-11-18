@@ -11,9 +11,10 @@ class video: public Multim{
   public:
     video();
     video(std::string name, std::string pathname, int dur);
-    ~video();
+    ~video() override;
     int getDuration() const;
-    void exibiteTxt(std::ostream & s) const;
+    void exibiteTxt(std::ostream & s) const override;
+    void play() const override;
 };
 
 
