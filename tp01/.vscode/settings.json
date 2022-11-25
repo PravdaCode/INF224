@@ -81,6 +81,11 @@
     "ctime": "cpp",
     "ratio": "cpp",
     "iomanip": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "csignal": "cpp",
+    "cstring": "cpp",
+    "semaphore": "cpp",
+    "stop_token": "cpp",
+    "thread": "cpp"
   }
 }

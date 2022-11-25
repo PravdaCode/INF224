@@ -47,14 +47,23 @@ void MultiTable::searchGroupe(std::string name)
 }
 
 void MultiTable::play(std::string name){
-    auto it = tableMulti.find(name);
-    if (it == tableMulti.end())
+    bool found = false;
+
+    for (auto const& element : tableMulti) {
+      if(element.first==name){
+        found = true;
+        element.second->play();
+      }
+    }
+
+    if (!found)
     {
         std::cout << "File not found" << std::endl;
     }
-    else
-    {
-        it->second->play();
-    }
 
+
+}
+
+MultimDict MultiTable::getMultim(){
+    return tableMulti;
 }

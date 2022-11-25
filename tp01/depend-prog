@@ -1,5 +1,6 @@
 -Wall 
 -g 
+-L"ws2_32" 
 -MM 
 Multim.cpp 
 Group.cpp 

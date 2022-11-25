@@ -9,12 +9,15 @@
 #include "Film.h"
 #include "Group.h"
 #include "MultiTable.h"
+#include "tcpserver.h"
 #include <memory>
+#include <vector>
 
 using namespace std;
 using GroupPtr = std::shared_ptr<Group>;
 using ImagePtr = std::shared_ptr<image>;
 using VideoPtr = std::shared_ptr<video>;
+const int PORT = 3331;
 
 int main(int argc, const char* argv[])
 {
@@ -40,32 +43,7 @@ int main(int argc, const char* argv[])
 
     group->addMedia(im);
     group->addMedia(vi);
-    //group->addMedia(film);
 
-    //group->exibiteGroup(cout);
-
-    //group->playGroup();
-
-    // film->exibiteTxt(cout);
-    // film->changeChapters(foo2, 10);
-    // film->exibiteTxt(cout);
-
-    // int aux = 2;
-
-    // Multim ** multim = new Multim *[3];
-    // multim[0] = new image("/flag-lenin-stalin", "src", 10, 10);
-    // multim[1] = new video("/Lenin", "src", 10);
-    // multim[2] = film;
-
-
-    // for(int i = 0; i < aux; i ++){
-    //     multim[i]->exibiteTxt(cout);
-    //     multim[i]->play();
-    // }
-
-    // for(int i = 0; i<aux; i++){
-    //     delete multim[i];
-    // }
     delete foo;
     delete foo2;
 
@@ -74,15 +52,16 @@ int main(int argc, const char* argv[])
     table->addMultim(vi);
     table->addGroup(group);
 
-    table->searchMultim("/flag-lenin-stalin");
-    //group->playGroup();
-    group.reset();
-    im = nullptr;
+    std::string namesMultim = "";
+    for (auto const& element : table->getMultim()) {
+      namesMultim += " " + element.first;
+    }
 
-    //film->exibiteTxt(cout);
-    //delete film;
-    
-    // delete[] multim;
+    std::string namesGroup = "";
+    for (auto const& element : table->getMultim()) {
+      namesGroup += " " + element.first;
+    }
 
-    return 0;
+    table->play("/flag-lenin-stalin");
+
 }

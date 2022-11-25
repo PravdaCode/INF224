@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Gui",
+      "request": "launch",
+      "mainClass": "Gui",
+      "projectName": "tp02_c7d81b9f"
+    },
+    {
+      "type": "java",
       "name": "Launch BipBip",
       "request": "launch",
       "mainClass": "BipBip",

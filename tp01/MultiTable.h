@@ -25,6 +25,7 @@ class MultiTable{
         void addGroup(GroupPtr group);
         void searchMultim(std::string name);
         void searchGroupe(std::string name);
+        MultimDict getMultim();
         void play(std::string name);
 
 };

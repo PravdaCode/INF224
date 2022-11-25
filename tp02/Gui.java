@@ -2,15 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class BipBip extends JFrame {
+public class Gui extends JFrame {
     JTextArea area;
-    JButton doIt, close;
+    JButton prev, next, open, close;
+    Client client;
 
-    public static void main(String argv[]) {
-        new BipBip();
-    }
-
-    public BipBip() {
+    public Gui(Client client) {
         super.setSize(500, 500);
         super.setTitle("TP02");
         JPanel mainPanel = new JPanel();
@@ -28,10 +25,20 @@ public class BipBip extends JFrame {
         
         firstPanel.add(area);
 
-        doIt = new JButton("Add ");
-        doIt.setPreferredSize(new Dimension(80, 20));
-        doIt.addActionListener(new DoItListener( ));
-        secondPanel.add(doIt);
+        prev = new JButton("Previous ");
+        prev.setPreferredSize(new Dimension(80, 20));
+        prev.addActionListener(new DoItListener( ));
+        secondPanel.add(prev);
+
+        next = new JButton("Next ");
+        next.setPreferredSize(new Dimension(80, 20));
+        next.addActionListener(new DoItListener( ));
+        secondPanel.add(next);
+
+        open = new JButton("Open ");
+        open.setPreferredSize(new Dimension(80, 20));
+        open.addActionListener(new DoItListener( ));
+        secondPanel.add(open);
 
         close = new JButton("Close");
         close.setPreferredSize(new Dimension(80, 20));
